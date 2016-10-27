@@ -1,5 +1,2 @@
 # JimJam707.github.io
-Nothing here right now, maybe one day I'll turn this into an automated playlist thing for Comfy Music.
-
-
-Maybe I won't?
+Really dumb site that just embeds a Google Drive form and a playlist that I have to manually change every week.
