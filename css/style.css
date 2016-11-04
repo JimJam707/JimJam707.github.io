@@ -4,6 +4,13 @@ h1
     font-size: 40px;
 	font-family: "Century Gothic", "Calibri", sans-serif;
 }
+
+h3
+{
+	color = "white";
+    font-size: 14px;
+	font-family: "Century Gothic", "Calibri", sans-serif;
+}
 body
 {
 	cursor: url('img/dino.png'), default;
