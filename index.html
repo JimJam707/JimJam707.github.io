@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Comfy Music</title>
 </head>
 
 <body>
@@ -16,8 +18,9 @@ Modified by JK to be IE7+/ Firefox compatible
 For this and over 400+ free scripts, visit http://javascriptkit.com
 */
 
-var trailLength = 8 // The length of trail (8 by default; put more for longer "tail")
-var path = "img/dino.png" // URL of your image
+var trailLength = 16 // The length of trail (8 by default; put more for longer "tail")
+//var path = "img/dino.png" // URL of your image
+var arrTrail = ["img/trail/A.png", "img/trail/M.png", "img/trail/O.png", "img/trail/Y.png"]
 
 var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
 var i,d = 0
@@ -26,7 +29,7 @@ function initTrail() { // prepares the script
 	images = new Array() // prepare the image array
 	for (i = 0; i < parseInt(trailLength); i++) {
 		images[i] = new Image()
-		images[i].src = path
+		images[i].src = arrTrail[i%4]
 	}
 	storage = new Array() // prepare the storage for the coordinates
 	for (i = 0; i < images.length*3; i++) {
@@ -38,6 +41,7 @@ function initTrail() { // prepares the script
 	trail()
 }
 function trail() { // trailing function
+
 	for (i = 0; i < images.length; i++) { // for every div/layer
 		document.getElementById("obj" + i).style.top = storage[d]+'px' // the Y-coordinate
 		document.getElementById("obj" + i).style.left = + storage[d+1]+'px' // the X-coordinate
@@ -47,7 +51,7 @@ function trail() { // trailing function
 		storage[i] = storage[i-2]
 	}
 	d = 0 // reset for future use
-	var timer = setTimeout("trail()",10) // call recursively 
+	var timer = setTimeout("trail()",60) // call recursively 
 }
 function processEvent(e) { // catches and processes the mousemove event 
 	if (window.event) { // for IE
@@ -66,11 +70,11 @@ function processEvent(e) { // catches and processes the mousemove event
 </script>
 
 <header>
-<img src="img/C.gif">
-<img src="img/O.gif">
-<img src="img/M.gif">
-<img src="img/F.gif" >
-<img src="img/Y.gif" >
+<img src="img/dance/C.gif">
+<img src="img/dance/O.gif">
+<img src="img/dance/M.gif">
+<img src="img/dance/F.gif" >
+<img src="img/dance/Y.gif" >
 </header>
 <section>
 <a href="https://goo.gl/forms/FxLKT9TH4QEN9KOg1"><h1>SUBMIT!</h1></a>
