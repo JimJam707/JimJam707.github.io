@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+function LoadFile() {
+    var oFrame = document.getElementById("frmFile");
+    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var arrLines = strRawContents.split("\n");
+    alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+    for (var i = 0; i < arrLines.length; i++) {
+        var curLine = arrLines[i];
+        alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+    }
+}
+</script>
+<head>
+<style>
+h1
+{
+	color = "white";
+    font-size: 40px;
+	font-family: "Century Gothic", "Calibri", sans-serif;
+}
+</style>
+</head>
+<body>
+<iframe id="frmFile" src="txt/playlists.txt" onload="LoadFile();" style="display: none;"></iframe>
+
+<section>
+
+<h1> you being redirected fam </h1>
+if for some reason you're using a browser so shitty this redirect doesn't work, follow this
+</section>
+</body>

@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
+function returnYTURL(i)
+{
+    var oFrame = document.getElementById("frmFile");
+    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var arrLines = strRawContents.split("\n");
+	return arrLines[i]
+}
+
+function getPLLength()
+{
+	var oFrame = document.getElementById("frmFile");
+    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var arrLines = strRawContents.split("\n");
+    alert("File " + oFrame.src + " has " + arrLines.length + " lines");
+	return arrLines.length;
+}
+</script>
 <head>
+<iframe id="frmFile" src="txt/playlists.txt" style="display: none;"></iframe>
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="shortcut icon" href="favicon.ico"/>
 <title>Comfy Music - Past Playlists</title>
@@ -11,25 +35,16 @@
 <a href="index.html"><h3><< Back Home</h3></a>
 <h1>Past Playlists!</h1>
 
-<section>
-
-<h3>11/11/2016</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbLYRD3s2QI0atSvkIJBbzA3" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section>
-<h3>04/11/2016</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbI4UDAfHqs5lojcsRcsCmZK" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section>
-<h3>28/10/2016</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbIBCUnJBTNPMv-k3sr33w_c" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section>
-<h3>24/10/2016</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbLHJ31iLr7l6EnA8C-6IuaS" frameborder="0" allowfullscreen></iframe>
-</section>
+<script>
+var url = "";
+var string;
+for (var i = 0; i < getPLLength(); i++)
+{
+	url = returnYTURL(i);
+	string = "</script><iframe width=\"560\" height=\"315\" src=\""
+	console.log(string);
+	document.write(string);
+}
+</script>
 </body>
 
