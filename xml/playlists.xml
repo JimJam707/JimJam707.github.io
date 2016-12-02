@@ -1,0 +1,31 @@
+<playlists>
+	<playlist id="0">
+		<date>24/10/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbLHJ31iLr7l6EnA8C-6IuaS</url>
+	</playlist>
+	
+	<playlist id="1">
+		<date>28/10/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbIBCUnJBTNPMv-k3sr33w_c</url>
+	</playlist>
+
+	<playlist id="2">
+		<date>4/11/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbI4UDAfHqs5lojcsRcsCmZK</url>
+	</playlist>
+	
+	<playlist id="3">
+		<date>11/11/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbLYRD3s2QI0atSvkIJBbzA3</url>
+	</playlist>
+	
+	<playlist id="4">
+		<date>18/11/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbIoYUvIaOIr_kj36NI1Vj1v</url>
+	</playlist>	
+	
+	<playlist id="5">
+		<date>27/11/16</date>
+		<url>https://www.youtube.com/embed/videoseries?list=PLS7U3KAZ1dbIJmpFRyHhBEdLa6Qu8A-GR</url>
+	</playlist>	
+</playlists>

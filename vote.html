@@ -1,5 +1,14 @@
-<!DOCTYPE html>
 <html>
+<script type="text/javascript">
+function LoadFile() {
+    var oFrame = document.getElementById("frmFile");
+    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var arrLines = strRawContents.split("\n");
+    window.location.href = arrLines[1]
+}
+</script>
 <head>
 <style>
 h1
@@ -11,13 +20,10 @@ h1
 </style>
 </head>
 <body>
+<iframe id="frmFile" src="txt/forms.txt" onload="LoadFile();" style="display: none;"></iframe>
 <section>
-<script language="javascript">
-	var url = "https://docs.google.com/forms/d/e/1FAIpQLSdtD0YxM7k_WieFx6__CxUOcerusP2nWwDz8vsifpcHevEf2Q/viewform"
-    window.location.href = url
-</script>
+
 <h1> you being redirected fam </h1>
 if for some reason you're using a browser so shitty this redirect doesn't work, follow this
-<script>document.write("link".link(url))</script>
 </section>
 </body>
